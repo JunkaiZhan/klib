@@ -85,7 +85,7 @@ def get_sheet_from_file(file_name, sheet_name):
 # Description : get the cell value from the work sheet
 # ===================================================== 
 def get_cell_from_sheet(sheet, row, column):
-    cell_value = sheet.cell(row=rowm column=column).value
+    cell_value = sheet.cell(row=row column=column).value
     return cell_value
 
 # ===========================================================================
