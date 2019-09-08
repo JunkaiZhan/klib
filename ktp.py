@@ -56,7 +56,7 @@ def get_list_from_string(pool, pattern):
 # Description : get a dictionary which map the key_pattern to 
 #               the value_patten in the file
 # ============================================================================
-def get_dict_from_file(file_name, key_pattern, value_pattern)
+def get_dict_from_file(file_name, key_pattern, value_pattern):
     check_file(file_name)
     file        = open(file_name, "r")
     content     = file.readlines()
@@ -85,7 +85,7 @@ def get_sheet_from_file(file_name, sheet_name):
 # Description : get the cell value from the work sheet
 # ===================================================== 
 def get_cell_from_sheet(sheet, row, column):
-    cell_value = sheet.cell(row=row column=column).value
+    cell_value = sheet.cell(row=row, column=column).value
     return cell_value
 
 # ===========================================================================
@@ -123,7 +123,7 @@ def get_index_in_row_header (sheet, item_name, header_pos = 1):
     max_col  = sheet.max_column
     row_list = get_row_from_sheet(sheet, header_pos, 1, max_col)
     for _ in range(0, len(row_list)):
-        if (item_name == row_list[_])
+        if (item_name == row_list[_]):
             index = _ + 1
             return index
     print("The item: " + item_name + " is not found in the header, please check the item name or header_pos")
@@ -137,7 +137,9 @@ def get_index_in_col_header (sheet, item_name, header_pos = 1):
     max_row  = sheet.max_row
     col_list = get_row_from_sheet(sheet, header_pos, max_row, 1)
     for _ in range(0, len(col_list)):
-        if (item_name == col_list[_])
+        if (item_name == col_list[_]):
             index = _ + 1
             return index
     print("The item: " + item_name + " is not found in the header, please check the item name or header_pos")
+
+
