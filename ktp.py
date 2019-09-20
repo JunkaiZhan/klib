@@ -54,7 +54,7 @@ def get_list_from_string(pool, pattern):
 # ============================================================================
 # Function    : get_dict_from_file(file_name, key_pattern, value_pattern)
 # Description : get a dictionary which map the key_pattern to 
-#               the value_patten in the file
+#               the value_patten in the file foreach line
 # ============================================================================
 def get_dict_from_file(file_name, key_pattern, value_pattern):
     check_file(file_name)
