@@ -75,4 +75,39 @@ def organize_file_into_folder(file_type, path):
             shutil.move(file_name, folder_name)
             print("I have moved the file: %s into folder: %s" % (file_name, folder_name))
 
+# =======================================================================
+# Function    : cp_dir(src_dir, dst_dir)
+# Description : copy the whole srouce directory to destination directory
+# ========================================================================
+def cp_dir(src_dir, dst_dir):
+    # check if need create the dst_dir
+    shutil.copytree(src_dir, dst_dir)
+
+# =====================================================
+# Function    : rm_file(file_path)
+# Description : delete the file_path
+# ===================================================== 
+def rm_file(file_path):
+    os.unlink(file_path)
+
+# =====================================================
+# Function    : rm_file_in_path(path, type)
+# Description : delete the files of type in path 
+# ===================================================== 
+def rm_file_in_path(path, type):
+    current_dir = os.getcwd()
+    os.chdir(path)
+    for file_name in os.listdir():
+        if file_name.endswith("." + type):
+            os.unlink(file_name)
+            print(">>> Delete the file: " + path + file_name)
+    os.chdir(current_dir)
+
+# =====================================================
+# Function    : rm_dir(path)
+# Description : delete the whole path
+# ===================================================== 
+def rm_dir(path):
+    # check if the path exists
+    shutil.rmtree(path)
 
