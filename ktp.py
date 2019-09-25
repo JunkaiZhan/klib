@@ -27,6 +27,20 @@ def check_empty(obj):
     if (len(obj) == 0):
         print("The return object is empty, please check the pattern or file")
 
+# ====================================================================
+# Function    : excel_int2letter(int)
+# Description : transform the int number to letter for column of excel
+# ====================================================================
+def excel_int2letter(int):
+    return openpyxl.cell.get_column_letter(int)
+
+# ====================================================================
+# Function    : excel_letter2int(letter)
+# Description : transform the letter to int number for column of excel
+# ====================================================================
+def excel_letter2int(letter):
+    return openpyxl.cell.column_index_from_string(letter)
+
 # =====================================================
 # Function    : get_list_from_file(file_name, pattern)
 # Description : get a queue of elements that are
