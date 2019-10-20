@@ -7,6 +7,15 @@ import re
 import sys
 import os
 import openpyxl
+import subprocess
+
+
+# =============================================
+# Function    : sh(cmd)
+# Description : do cmd with bash shell
+# ============================================= 
+def sh(cmd):
+    subprocess.call(cmd, shell=True)
 
 # =============================================
 # Function    : check_file(file_name)
